@@ -146,7 +146,7 @@
 
     function M(t) {
         this.serverObj = t;
-        this.testWs = new WebSocket("ws://" + this.serverObj.ip + ":7020");
+        this.testWs = new WebSocket("wss://" + this.serverObj.ip + ":7020");
         this.startT = +new Date;
         this.testWs.binaryType = "arraybuffer";
         var e = this;
