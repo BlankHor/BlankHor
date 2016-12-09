@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+    body {
+        background-color: #3FBA54
+    }
+</style>
+
+<head>
+    <title>mope.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Survive and climb the food chain in mopeio, the hit browser game!">
+    <meta name="keywords" content="mope, mope.io, mopeio,io games, .io, spaceships, browser game, html game, html5 game, agario, diepio, flash game, space, multiplayer">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Audio -->
+    <audio id="spawn_cell" src="audio/click.mp3"></audio>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+
+
+</head>
+
+<body>
+
+
+    <div id="gameAreaWrapper">
+        <input id="chatinput" type="text" class="chat-input" placeholder="Пишите сюда...." maxlength="35" />
+        <canvas tabindex="1" id="gCanvas"></canvas>
+    </div>
+    <div id="connecting">
+        <p id="desc">Подключение...</p>
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div id="preroll" class="vidAd"></div>
+    <div id="startMenuWrapper">
+
+        <div id="startMenu">
+            <p id="titleText">
+                MOPE.IO
+            </p>
+            <div id="nickInputContainer" style="display: block;">
+                <input id="nickInput" autofocus placeholder="Ваш Ник" maxlength="15" style="width: 100%; height: 40px; line-height: 36px;">
+            </div>
+
+            <button id="settingsButton" type="submit" style="background-color:transparent; border-color:transparent;">
+  <img src="img/settings.png" width=30 height=30/>
+</button>
+
+            <select id="serverSelect">
+              <option>
+                Поиск сервера...
+              </option>
+            </select>
+
+            <div id="optionsDiv" style="margin-top: 10px; display:none;">
+              <label><input type="checkbox" id="options_noImages"><span style="color: black;">Отключить скины  </span></label></br>
+              <label><input type="checkbox" id="options_noNames"><span style="color: black;">Отключить ники и чат  </span></label></br>
+              <label><input type="checkbox" id="options_lowGraphics"><span style="color: black;">Облекченная графика </span></label>
+              <label style="display: none"><input type="checkbox" id="options_noJoystick"><span style="color: #194614;">No Joystick (mobile)</span></label>
+              <label style="display: none"><input type="checkbox" id="options_leftHanded"><span style="color: #194614;">LEFT-handed Joystick</span></label>
+
+            </div>
+
+            <a>
+                <button id="startButton" style="visibility:hidden;">Играть</button>
+            </a>
+            <p id="spawnXpLabel">
+            </p>
+            <!-- mope.io Large Rectangle -->
+
+            <!-- adinplay banner ad 1) -->
+
+        </div>
+
+
+        <!--<div id="partyLink">
+
+            <a class="partyLinkBut" id="partyLinkOpenBut">Make Party</a>
+            <div id="partyLinkClicked" style="display:none;">
+                <p style="">
+                    Your friends can join your exact game with this party link:
+                </p>
+                <input type="text" value="...Generating link..." readonly="" id="partyLinkTxt" style="cursor: text; width: 100px; float: left;">
+                <a href="#" class="partyLinkBut" id="partyLinkCopyBut">Copy</a>
+            </div>
+
+        </div> -->
+        <div id="howToPlayPopup">
+            <!-- http://www.limaker.com/ -->
+            <h2>Как Играть</h2>
+            <ul>
+                <li>
+                    Удерживайте левую кнопку мыши (или пробел) \n для ускорения
+                </li>
+                <li>
+                    Правая кнопка мыши (или W) для действия
+                </li>
+                <li>
+                    Нажмите ENTER что бы открыть чат
+                </li>
+                <li>Удерживайте W для того что бы плыть под водой!</li>
+                <li>Ешьте других игроков, или еду помеченную светлозеленым!</li>
+                <li>Берегитесь игроков помеченных красным (Они могут съесть вас)!</li>
+            </ul>
+
+        </div>
+       
+
+    <!-- JS -->
+    <script src="client.js"></script>
+
+    <!-- curse adex (end marker) -->
+    <div id='cdm-zone-end'></div>
+
+</body>
+<!-- copyright 2016 Stan Tatarnykov, You may use images/videos of mope.io commercially. All rights reserved. -->
+<!-- business contact at clickstan@gmail.com-->
+
+</html>
